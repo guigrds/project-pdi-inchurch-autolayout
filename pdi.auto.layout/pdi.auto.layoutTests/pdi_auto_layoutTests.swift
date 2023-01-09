@@ -1,10 +1,3 @@
-//
-//  pdi_auto_layoutTests.swift
-//  pdi.auto.layoutTests
-//
-//  Created by Guilherme Rodrigues on 09/01/23.
-//
-
 import XCTest
 
 final class pdi_auto_layoutTests: XCTestCase {
