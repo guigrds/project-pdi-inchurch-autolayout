@@ -14,6 +14,7 @@
 		91217B49296CABF100257FBF /* pdi_auto_layoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91217B48296CABF100257FBF /* pdi_auto_layoutTests.swift */; };
 		91217B53296CABF200257FBF /* pdi_auto_layoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91217B52296CABF200257FBF /* pdi_auto_layoutUITests.swift */; };
 		91217B55296CABF200257FBF /* pdi_auto_layoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91217B54296CABF200257FBF /* pdi_auto_layoutUITestsLaunchTests.swift */; };
+		91217B62296CB4FE00257FBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91217B61296CB4FE00257FBF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		91217B4E296CABF200257FBF /* pdi.auto.layoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pdi.auto.layoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91217B52296CABF200257FBF /* pdi_auto_layoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdi_auto_layoutUITests.swift; sourceTree = "<group>"; };
 		91217B54296CABF200257FBF /* pdi_auto_layoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdi_auto_layoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91217B61296CB4FE00257FBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				91217B3A296CABEF00257FBF /* Assets.xcassets */,
 				91217B3C296CABEF00257FBF /* pdi_auto_layout.entitlements */,
 				91217B3D296CABEF00257FBF /* Preview Content */,
+				91217B61296CB4FE00257FBF /* ViewController.swift */,
 			);
 			path = pdi.auto.layout;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91217B62296CB4FE00257FBF /* ViewController.swift in Sources */,
 				91217B39296CABAB00257FBF /* ContentView.swift in Sources */,
 				91217B37296CABAB00257FBF /* pdi_auto_layoutApp.swift in Sources */,
 			);
