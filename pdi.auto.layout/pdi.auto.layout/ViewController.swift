@@ -29,6 +29,14 @@ class ViewController: UIViewController {
         
     }()
     
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Próximo", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.addSubview(descriptionTextView)
@@ -38,14 +46,35 @@ class ViewController: UIViewController {
     }
     
     private func setupButtomControls() {
-        view.addSubview(previousButton)
-        previousButton.backgroundColor = .red
+//        view.addSubview(previousButton)
+//        previousButton.backgroundColor = .red
+        
+        let yellowView = UIView()
+        yellowView.backgroundColor = .yellow
+        
+        let greenView = UIView()
+        greenView.backgroundColor = .green
+        
+        let blueView = UIView()
+        blueView.backgroundColor = .blue
+        
+        
+        
+        let buttomControlsStackView = UIStackView(arrangedSubviews: [yellowView, greenView, blueView])
+        buttomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttomControlsStackView.distribution = .fillEqually
+//        buttomControlsStackView.axis = .vertical
+        
+        view.addSubview(buttomControlsStackView)
+        
+        
         
         NSLayoutConstraint.activate([
-            previousButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            previousButton.heightAnchor.constraint(equalToConstant: 50)
+            buttomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            buttomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            buttomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            buttomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
+            
         
         ])
     }
