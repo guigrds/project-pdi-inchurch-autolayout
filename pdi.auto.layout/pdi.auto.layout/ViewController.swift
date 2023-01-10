@@ -21,11 +21,33 @@ class ViewController: UIViewController {
         return textView
     }()
     
+    let previousButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Voltar", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.addSubview(descriptionTextView)
         
         setuplayout()
+        setupButtomControls()
+    }
+    
+    private func setupButtomControls() {
+        view.addSubview(previousButton)
+        previousButton.backgroundColor = .red
+        
+        NSLayoutConstraint.activate([
+            previousButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            previousButton.heightAnchor.constraint(equalToConstant: 50)
+        
+        ])
     }
         
         private func setuplayout(){
