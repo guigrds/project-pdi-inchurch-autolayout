@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Voltar", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.gray, for: .normal)
         return button
         
     }()
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Próximo", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         return button
         
     }()
@@ -49,18 +52,18 @@ class ViewController: UIViewController {
 //        view.addSubview(previousButton)
 //        previousButton.backgroundColor = .red
         
-        let yellowView = UIView()
-        yellowView.backgroundColor = .yellow
+//        let yellowView = UIView()
+//        yellowView.backgroundColor = .yellow
         
         let greenView = UIView()
         greenView.backgroundColor = .green
         
-        let blueView = UIView()
-        blueView.backgroundColor = .blue
+//        let blueView = UIView()
+//        blueView.backgroundColor = .blue
         
         
         
-        let buttomControlsStackView = UIStackView(arrangedSubviews: [yellowView, greenView, blueView])
+        let buttomControlsStackView = UIStackView(arrangedSubviews: [previousButton, greenView, nextButton])
         buttomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         buttomControlsStackView.distribution = .fillEqually
 //        buttomControlsStackView.axis = .vertical
