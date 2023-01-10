@@ -11,9 +11,13 @@ class ViewController: UIViewController {
     
     let descriptionTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "Um pequeno Digimon que derramou a penugem que cobria a sua superfície e cujo corpo ficou maior. Embora tenha se tornado capaz de se mover de forma mais ativa, ainda é incapaz de lutar. Ele pode criar bolhas da sua boca para intimidar os seus inimigos."
+        let attibutedText = NSMutableAttributedString(string: "Koromon. Nível: Bebé II", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
+        attibutedText.append(NSAttributedString(string: "\n\n\nUm pequeno Digimon que derramou a penugem que cobria a sua superfície e cujo corpo ficou maior. Embora tenha se tornado capaz de se mover de forma mais ativa, ainda é incapaz de lutar. Ele pode criar bolhas da sua boca para intimidar os seus inimigos.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        textView.attributedText = attibutedText
+        
+//        textView.text = "Um pequeno Digimon que derramou a penugem que cobria a sua superfície e cujo corpo ficou maior. Embora tenha se tornado capaz de se mover de forma mais ativa, ainda é incapaz de lutar. Ele pode criar bolhas da sua boca para intimidar os seus inimigos."
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = UIFont.boldSystemFont(ofSize: 20)
+//        textView.font = UIFont.boldSystemFont(ofSize: 20)
         textView.textAlignment = .center
         textView.isEditable = false
         textView.isScrollEnabled = false
@@ -50,8 +54,8 @@ class ViewController: UIViewController {
             topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
             
             descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
-            descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-            descriptionTextView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+            descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
+            descriptionTextView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24).isActive = true
             descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
 }
