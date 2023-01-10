@@ -1,5 +1,9 @@
 import UIKit
 
+extension UIColor {
+    static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+}
+
 class ViewController: UIViewController {
     
     var koromonimageView: UIImageView = {
@@ -21,11 +25,54 @@ class ViewController: UIViewController {
         return textView
     }()
     
+    let previousButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Voltar", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.gray, for: .normal)
+        return button        
+    }()
+    
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Próximo", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.mainPink, for: .normal)
+        return button
+    }()
+    
+    private var pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+        pc.currentPageIndicatorTintColor = .mainPink
+        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        return pc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.addSubview(descriptionTextView)
         
         setuplayout()
+        setupButtomControls()
+    }
+    
+    private func setupButtomControls() {
+
+        let buttomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
+        buttomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttomControlsStackView.distribution = .fillEqually
+        view.addSubview(buttomControlsStackView)
+        
+        NSLayoutConstraint.activate([
+            buttomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            buttomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            buttomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            buttomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
         
         private func setuplayout(){
