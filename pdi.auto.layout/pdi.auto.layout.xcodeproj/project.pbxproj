@@ -13,6 +13,7 @@
 		91217BA9296CCA2100257FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91217BA7296CCA2100257FBF /* Main.storyboard */; };
 		91217BAB296CCA2400257FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91217BAA296CCA2400257FBF /* Assets.xcassets */; };
 		91217BAE296CCA2400257FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91217BAC296CCA2400257FBF /* LaunchScreen.storyboard */; };
+		91217BB6296DC76300257FBF /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91217BB5296DC76300257FBF /* SwipingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91217BAA296CCA2400257FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91217BAD296CCA2400257FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91217BAF296CCA2400257FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91217BB5296DC76300257FBF /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				91217BA1296CCA2100257FBF /* AppDelegate.swift */,
 				91217BA3296CCA2100257FBF /* SceneDelegate.swift */,
 				91217BA5296CCA2100257FBF /* ViewController.swift */,
+				91217BB5296DC76300257FBF /* SwipingController.swift */,
 				91217BA7296CCA2100257FBF /* Main.storyboard */,
 				91217BAA296CCA2400257FBF /* Assets.xcassets */,
 				91217BAC296CCA2400257FBF /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				91217BA6296CCA2100257FBF /* ViewController.swift in Sources */,
 				91217BA2296CCA2100257FBF /* AppDelegate.swift in Sources */,
 				91217BA4296CCA2100257FBF /* SceneDelegate.swift in Sources */,
+				91217BB6296DC76300257FBF /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
