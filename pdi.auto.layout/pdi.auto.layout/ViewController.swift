@@ -31,8 +31,7 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.gray, for: .normal)
-        return button
-        
+        return button        
     }()
     
     let nextButton: UIButton = {
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.mainPink, for: .normal)
         return button
-        
     }()
     
     private var pageControl: UIPageControl = {
@@ -63,25 +61,10 @@ class ViewController: UIViewController {
     }
     
     private func setupButtomControls() {
-//        view.addSubview(previousButton)
-//        previousButton.backgroundColor = .red
-        
-//        let yellowView = UIView()
-//        yellowView.backgroundColor = .yellow
-        
-//        let greenView = UIView()
-//        greenView.backgroundColor = .green
-        
-//        let blueView = UIView()
-//        blueView.backgroundColor = .blue
-        
-        
-        
+
         let buttomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         buttomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         buttomControlsStackView.distribution = .fillEqually
-//        buttomControlsStackView.axis = .vertical
-        
         view.addSubview(buttomControlsStackView)
         
         NSLayoutConstraint.activate([
@@ -89,8 +72,6 @@ class ViewController: UIViewController {
             buttomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             buttomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             buttomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
-            
-        
         ])
     }
         
